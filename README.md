@@ -5,7 +5,7 @@
 - **Download link**: https://dl.ltsecurityinc.com/firmware/platinum/latest/AC3F_V1.1.0_191121.zip
 
 ## Description
-LTSecurity LTK3500SF AC3F_V1.1.0_build191121 was discovered to contain a hardcoded password for root which is stored in the component /etc/shadow.
+LTSecurity LTK3500SF (firmware AC3F_V1.1.0_build191121) was discovered to contain a hardcoded password for root stored in the file /etc/shadow.
 
 ## Proof-Of-Concept
 After the download of the firmware via the command *wget https://dl.ltsecurityinc.com/firmware/platinum/latest/AC3F_V1.1.0_191121.zip* and the unpacking with **unzip AC3F_V1.1.0_191121.zip**, it is possible to move inside with **cd DZP20191115128_501__H2_EN_GM_V1.1.0_build191121/** where it is possible to find the firmware's image digicap.dav.
@@ -22,4 +22,4 @@ The same password (12345) is also used for guest account.
 
 <img width="499" height="185" alt="image" src="https://github.com/user-attachments/assets/5bdf650e-dd50-4f22-bf4a-1a134de16839" />
 
-An attacker can gain full root access to the device: These credentials can be potentially used to access the device via Telnet/SSH or physical serial console (UART), perform Privilege Escalation if any other low-privilege vulnerability (like XSS or Command Injection) is exploited.
+An attacker can gain full root access to the device: these credentials can be potentially used to access the device via Telnet/SSH or physical serial console (UART), perform Privilege Escalation if any other low-privilege vulnerability is exploited.
