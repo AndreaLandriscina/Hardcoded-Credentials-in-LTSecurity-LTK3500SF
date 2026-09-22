@@ -5,7 +5,9 @@
 - **Download link**: https://dl.ltsecurityinc.com/firmware/platinum/latest/AC3F_V1.1.0_191121.zip
 
 ## Description
-LTSecurity LTK3500SF (firmware AC3F_V1.1.0_build191121) was discovered to contain a hardcoded password for root stored in the file /etc/shadow.
+LTSecurity LTK3500SF (firmware AC3F_V1.1.0_build191121) was discovered to contain a hardcoded password for root stored in the file /etc/shadow. 
+
+This vulnerability is tracked as CVE-2026-47116.
 
 ## Proof-Of-Concept
 After the download of the firmware via the command *wget https://dl.ltsecurityinc.com/firmware/platinum/latest/AC3F_V1.1.0_191121.zip* and the unpacking with **unzip AC3F_V1.1.0_191121.zip**, it is possible to move inside with **cd DZP20191115128_501__H2_EN_GM_V1.1.0_build191121/** where it is possible to find the firmware's image digicap.dav.
